@@ -68,6 +68,9 @@ body {
     animation-name: change;
     animation-duration: 30s;
     animation-fill-mode: forwards;
+    -webkit-animation-name: change;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-fill-mode: forwards;
     animation-delay: 5s;
     width: 100%;
 
@@ -102,6 +105,59 @@ body {
     z-index: 0;
     position: absolute;
     top: 60vh;
+}
+
+@-moz-keyframes change {
+
+    0%,
+    5% {
+        transform: translatey(0);
+    }
+
+    10%,
+    15% {
+        transform: translatey(-2.5rem);
+    }
+
+    20%,
+    25% {
+        transform: translatey(-5rem);
+    }
+
+    30%,
+    35% {
+        transform: translatey(-7.5rem);
+    }
+
+    40%,
+    45% {
+        transform: translatey(-10rem);
+    }
+
+    50%,
+    55% {
+        transform: translatey(-12.5rem);
+    }
+
+    60%,
+    65% {
+        transform: translatey(-15rem);
+    }
+
+    70%,
+    75% {
+        transform: translatey(-17.5rem);
+    }
+
+    80%,
+    85% {
+        transform: translatey(-20rem);
+    }
+
+    90%,
+    100% {
+        transform: translatey(-22.5rem);
+    }
 }
 
 @keyframes change {
