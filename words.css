@@ -48,7 +48,6 @@ body {
 @media screen and (max-width: 1000px) {
     .content {
         bottom: 0;
-        top: 46rem;
     }
 
 }
