@@ -107,8 +107,7 @@ body {
     top: 60vh;
 }
 
-@-moz-keyframes change {
-
+@-webkit-keyframes change {
     0%,
     5% {
         transform: translatey(0);
