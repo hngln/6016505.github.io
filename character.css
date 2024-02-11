@@ -45,7 +45,12 @@ body {
     position: relative;
     z-index: 4;
 }
+@media screen and (max-width: 1000px) {
+    .komi-container {
+        bottom: 3rem;
+    }
 
+}
 .komi *,
 .komi *::before,
 .komi *::after {
