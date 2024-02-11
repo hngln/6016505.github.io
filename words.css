@@ -31,7 +31,7 @@ body {
 
 .content {
     position: absolute;
-    height: 160px;
+    height: 10rem;
     overflow: auto;
     font-family: 'Lato', sans-serif;
     font-size: 35px;
@@ -43,14 +43,6 @@ body {
 
 .display-none {
     display: none;
-}
-
-@media screen and (max-width: 1000px) {
-    .content {
-        bottom: 0;
-        top: 46rem;
-    }
-
 }
 
 .content__container {
@@ -89,8 +81,7 @@ body {
 @media screen and (max-width: 1000px) {
     .content {
         position: absolute;
-        bottom: -1%;
-        height: 160px;
+        height: 7rem;
         width: 100%;
         overflow: hidden;
         font-family: 'Lato', sans-serif;
@@ -98,7 +89,6 @@ body {
         line-height: 40px;
         color: #ecf0f1;
         z-index: 10;
-        word-wrap: break-word;
     }
 
 }
