@@ -1,3 +1,11 @@
+:root {
+    --plate-background: #f1f1f1;
+    --plate-base-box-shadow: #aaa;
+    --cake-base-background: #fcf4dd;
+    --cake-topping: #eac4d5;
+    --star: orange;
+}
+
 *,
 *:before,
 *:after {
@@ -19,9 +27,10 @@
     place-items: center;
 }
 
+
 .wrapper {
     position: relative;
-    transform: scale(0.5);
+    transform: scale(0.65);
     z-index: 10;
     bottom: 2.2rem;
 }
@@ -31,10 +40,10 @@
     position: relative;
     width: 250px;
     height: 75px;
-    background: #f1f1f1;
+    background: var(--plate-background);
     margin-top: 0;
     border-radius: 50%;
-    box-shadow: 0px 3px 5px 0px #aaa;
+    box-shadow: 0px 3px 5px 0px var(--plate-base-box-shadow);
 }
 
 .cake-wrap {
@@ -46,7 +55,7 @@
     position: relative;
     width: 200px;
     height: 50px;
-    background: #f0e1ba;
+    background: var(--cake-base-background);
 }
 
 .cake-base .base-front {
@@ -108,23 +117,23 @@
 .cake-topping .topping-front {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, #f07173 40%, transparent);
+    background: linear-gradient(to bottom, var(--cake-topping) 40%, transparent);
 }
 
 .cake-topping .topping-front .top-layer {
     height: 30%;
-    background: #f07173;
+    background: var(--cake-topping);
 }
 
 .cake-topping .topping-front .bottom-layer {
     position: relative;
     height: 70%;
-    background: #f07173;
+    background: var(--cake-topping);
     clip-path: url('#my-clip-path');
 }
 
 .cake-topping .topping-top {
-    background: #f07173;
+    background: var(--cake-topping);
     position: absolute;
     width: 100%;
     height: 65px;
@@ -228,7 +237,7 @@
     width: 15px;
     height: 15px;
     position: absolute;
-    background-color: orange;
+    background-color: var(--star);
     clip-path: url(#my-star-path);
     opacity: 0;
 }
