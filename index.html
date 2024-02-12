@@ -57,13 +57,8 @@
               <div class="komi-hair-bangs-3"></div>
             </div>
             <div class="komi-face-inner">
-              <svg>
-                <path
-                  class="glasses"
-                  d="M133.54 81.76c-4.7-1.42-15.29-2.42-19.83-.45-5.82 2.17-3.18 1.57-8.55 1.17-5.36.4-2.74 1-8.55-1.18-7.3-2.55-15.58-.24-22.25.72v2.75c2.46.24 1.26 6.78 3.06 10.32 2.13 7.23 12.69 9.55 18.19 5.49 3.9-2 7.08-10.32 7.21-12.86 0-1.64 4.15-2.57 4.61.24.11 2.53 3.42 10.69 7.28 12.62 5.5 4 16 1.74 18.17-5.49 1.8-3.54 1.69-9.92 2.88-10.32s.74-2.67 0-2.75-1.02-.1-2.22-.26zM97.25 97.49C90.94 104.81 79 101.2 78 92.3c-.7-2.62-1-7.3 1.27-9.12s6.88-1.87 9.23-2c11.14-.26 16.62 5.6 8.75 16.31zm35.12-5.19c-3.71 17.2-27.26 7.42-22.09-7.36 1.87-3.11 9.09-3.84 11.55-3.73 8.07-.04 12.7 1.79 10.54 11.09z"
-                  fill="#d1d1d1"
-                />
-              </svg>
+              <img src="glasses.svg" />
+
               <div class="komi-eye komi-eye-left">
                 <div class="komi-eye-pupil">
                   <div class="komi-eye-sparkle"></div>
@@ -153,25 +148,23 @@
       <div class="content__container">
         <ul class="content__container__list">
           <li class="content__container__list__item">
-            click/hover on character
+            Click(phone)/hover(laptop) on character
           </li>
           <li class="content__container__list__item">
             This short little animation
           </li>
           <li class="content__container__list__item">
-            is for an energetic girl I know
+            Is for an energetic girl I know
           </li>
-          <li class="content__container__list__item">older?</li>
-          <li class="content__container__list__item">yes</li>
-          <li class="content__container__list__item">less annoying?</li>
-          <li class="content__container__list__item">well, i hope so</li>
+          <li class="content__container__list__item">Older?</li>
+          <li class="content__container__list__item">Yes</li>
+          <li class="content__container__list__item">Wiser?</li>
+          <li class="content__container__list__item">Well, I hope so</li>
           <li class="content__container__list__item">
             I wish you more years of a sweet life
           </li>
-          <li class="content__container__list__item">wish for something</li>
-          <li class="content__container__list__item">
-            blow into mircophone of device
-          </li>
+          <li class="content__container__list__item">Happy birthday</li>
+          <li class="content__container__list__item">SIMONE</li>
         </ul>
       </div>
     </div>
@@ -201,11 +194,16 @@
 
         function updateFlame() {
           analyser.getByteFrequencyData(dataArray);
+          let x = 1;
 
           var average = getAverageVolume(dataArray);
           if (conditionToStartLoop && !loopHasRun) {
-            if (average > 40) {
-              flameElement.style.opacity = 0;
+            if (average > 50) {
+              let i = setInterval(function () {
+                flameElement.style.opacity = x;
+                x = x - 0.1;
+              }, 50);
+
               loopHasRun = true;
             }
           }
